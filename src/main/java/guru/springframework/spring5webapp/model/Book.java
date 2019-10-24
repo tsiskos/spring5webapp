@@ -1,4 +1,4 @@
-package model;
+package guru.springframework.spring5webapp.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -34,6 +34,12 @@ public class Book {
         this.publisher = publisher;
     }
 
+    public Book(String title, String isbn, Publisher publisher, Set<Author> authors) {
+        this.title = title;
+        this.isbn = isbn;
+        this.publisher = publisher;
+        this.authors = authors;
+    }
 
 
     public Long getId() {
