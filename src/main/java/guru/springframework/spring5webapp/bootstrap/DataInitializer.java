@@ -23,6 +23,11 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
     @Autowired
     private PublisherRepository publisherRepository;
 
+    /**
+     *  Function that is called when the Refresh event is triggered from the spring.
+     *  This usually happens at start time. When spring boot is up some dummy data will be stored in the database.
+     * @param contextRefreshedEvent
+     */
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         initializeDummyData();
